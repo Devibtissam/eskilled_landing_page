@@ -1,0 +1,24 @@
+@use "./breakpoints" as *;
+
+@mixin gradient-y(
+  $startColor,
+  $endColor,
+  $startPercent: 0%,
+  $endPercent: 100%
+) {
+  background: linear-gradient(
+    180deg,
+    $startColor $startPercent,
+    $endColor $endPercent
+  );
+}
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+@mixin transition($duration: 0.5s, $speed: ease-in) {
+  transition: all $duration $speed;
+}

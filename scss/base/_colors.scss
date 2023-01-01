@@ -1,0 +1,67 @@
+:root {
+  /* Violet */
+  --violet-100: #666ca3;
+  --violet-200: #4851ff;
+  --violet-300: #13183f;
+  --violet-400: #f0f1ff;
+
+  /* Gray */
+  --gray-100: #ffffff;
+
+  /* Crimson */
+  --crimson-100: #f02aa6;
+
+  /* Scarlet red */
+
+  --scarletRed-100: #ffa7c3;
+
+  // --scarletRed-200: #f74780;
+
+  --scarletRed-200: #eb0058;
+
+  /* Blue violet */
+  --blueViolet-100: #72758c;
+
+  /* Vermilion */
+  --vermilion-100: #ff6f48;
+
+  //   typography
+  --color-text: var(--blueViolet-100);
+  --color-heading-1: var(--violet-300);
+  --color-heading-2: var(--gray-100);
+  --color-link: var(--scarletRed-200);
+  --color-link-hover: var(--scarletRed-100);
+  --color-btn: var(--gray-100);
+
+  // buttons
+  --btn-secondary-bg: var(--violet-300);
+  --btn-hover: var(--scarletRed-100);
+  --btn-secondary-hover: var(--violet-100);
+
+  // cards
+  --card-bg: var(--gray-100);
+
+  // bg
+  --footer-bg: var(--violet-300);
+  --ft-clr: var(--scarletRed-200);
+
+  body {
+    color: var(--color-text);
+  }
+
+  h1,
+  h3 {
+    color: var(--color-heading-1);
+  }
+
+  h2 {
+    color: var(--color-heading-2);
+  }
+
+  .link {
+    color: var(--color-link);
+    &:hover {
+      color: var(--color-link-hover);
+    }
+  }
+}

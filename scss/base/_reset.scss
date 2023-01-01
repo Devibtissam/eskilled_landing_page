@@ -1,0 +1,51 @@
+@use "../abstracts/mixins" as *;
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  @include gradient-y(var(--gray-100), var(--violet-400));
+  line-height: 1.5;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+a {
+  text-decoration: none;
+  &:focus,
+  &:visited {
+    color: unset;
+  }
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  outline: none;
+  background-color: transparent;
+  border: none;
+}

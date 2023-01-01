@@ -1,0 +1,17 @@
+:root {
+  --columns: 12;
+  --width: 12;
+  --constantGap: 0.1%;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+[class*="col-"] {
+  --initialBasis: calc(var(--width, 0) / var(--columns, 16) * 100%);
+  --gap: calc((var(--columns) - var(--width)) * var(--constantGap));
+  flex-basis: calc(var(--initialBasis) - var(--gap));
+}

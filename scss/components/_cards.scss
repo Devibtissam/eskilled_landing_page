@@ -1,0 +1,56 @@
+@use "../abstracts/mixins" as *;
+
+.card-white{
+  background-color: var(--card-bg);
+}
+.card-colored{
+  @include gradient-y(var(--vermilion-100), var(--crimson-100));;
+
+}
+.cards{
+   justify-content: space-between;
+  
+}
+.card{
+    padding: var(--space-lg) var(--space-md);
+    margin-bottom: var(--space-xl);
+    border-radius: 20px;
+    max-height: 16.1875rem;
+   
+    &__icon{
+      top: -15%;
+    }
+    &__title,
+    &__desc{
+      margin-bottom: var(--space-sm);
+    }
+    &__desc{
+      max-width: 95%;
+    }
+}
+
+// for 4 columns grid on Mobile 
+
+[class*="col-3-"] {
+  --width: 4;
+}
+
+// Media  query for Tablet devices
+@include breakpoint-up(medium){
+  .card{
+    height: 16.1875rem;
+  }
+  [class*="col-3-"] {
+    --constantGap : 0.5%;
+  --width: 2;
+}
+}
+
+@include breakpoint-up(large){
+  [class*="col-3-"] {
+    --constantGap : 0.1%;
+  --width: 4;
+}
+}
+
+

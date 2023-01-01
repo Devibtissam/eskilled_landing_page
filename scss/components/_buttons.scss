@@ -1,0 +1,55 @@
+@use "../abstracts/mixins" as *;
+
+.btn {
+  color: var(--color-btn);
+  padding: 0.6875rem 1.5rem;
+  border-radius: 20px;
+  text-transform: capitalize;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1;
+  position: relative;
+  max-width: 187px;
+  z-index: 1;
+
+  &:visited,
+  &:focus,
+  &:hover {
+    color: var(--color-btn);
+    @include transition(0.25s);
+  }
+
+  &.btn-primary-bg::after,
+  &.btn-accent-bg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--btn-hover);
+    z-index: -1;
+    border-radius: 20px;
+    opacity: 0;
+    @include transition(0.25s);
+  }
+
+  &.btn-primary-bg:hover::after,
+  &.btn-accent-bg:hover::after {
+    opacity: 1;
+  }
+
+  &.btn-primary-bg {
+    @include gradient-y(var(--vermilion-100), var(--crimson-100));
+  }
+  &.btn-secondary-bg {
+    background-color: var(--btn-secondary-bg);
+
+    &:hover {
+      background-color: var(--btn-secondary-hover);
+    }
+  }
+  &.btn-accent-bg {
+    @include gradient-y(var(--violet-200), var(--crimson-100));
+  }
+}

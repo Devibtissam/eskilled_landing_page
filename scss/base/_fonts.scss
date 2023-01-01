@@ -1,0 +1,26 @@
+:root {
+  --font-primary: "Plus Jakarta Sans", sans-serif;
+  --fw-500: 500;
+  --fw-700: 700;
+  --fw-800: 800;
+
+  --fw-small: var(--fw-500);
+  --fw-medium: var(--fw-700);
+  --fw-large: var(--fw-800);
+}
+
+body {
+  font-family: var(--font-primary);
+  font-weight: var(--fw-small);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: var(--fw-large);
+}
+
+a,
+button {
+  font-weight: var(--fw-medium);
+}

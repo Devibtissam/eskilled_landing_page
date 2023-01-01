@@ -1,0 +1,32 @@
+@use "../abstracts/mixins" as *;
+.container {
+  margin: var(--space-md) auto;
+  max-width: 95%;
+  @include breakpoint-up(large) {
+    max-width: 950px;
+  }
+  @include breakpoint-up(x-large) {
+    max-width: 1200px;
+  }
+}
+
+.pos-rlt {
+  position: relative;
+}
+.pos-abs {
+  position: absolute;
+}
+.center-text {
+  text-align: center;
+}
+
+// Mobile First - grid system
+.row {
+  --columns: 4;
+}
+
+.ft-style {
+  color: var(--ft-clr);
+  text-align: center;
+  font-size: calc(var(--fs-sm) / 1.2);
+}
